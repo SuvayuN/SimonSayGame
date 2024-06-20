@@ -63,21 +63,3 @@ function reset(){
         document.querySelector("body").style.backgroundColor="white";
     },100);
 }
-
-// Functionality for mobile
-
-document.addEventListener("touch",function(){
-    if(start==false){
-        start=true;
-        levelup();
-    }
-})
-for(box of boxes){
-    box.addEventListener("touch",function(){
-        if(start==true){
-            usrIpt.push(this.id);
-            btnFlash(this);
-            checkAns(usrIpt.length-1);
-        }
-    })
-}
